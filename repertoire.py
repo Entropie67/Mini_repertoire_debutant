@@ -2,8 +2,7 @@
 # Mini projet débutant.
 import json
 print('#'*50)
-print("\n Répertoir trop puissant |\n version réalisée par Red Richards, \n alias \
- Mr Fantastique à l'occasion de son apparition dans Docteur Strange 2\n")
+print("\n Mon super agenda \n")
 print('#'*50)
 
 def ajouter_nom(data):
