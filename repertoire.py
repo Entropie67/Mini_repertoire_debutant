@@ -13,4 +13,7 @@ while choix != 0:
     print(" 2 - Consulter le répertoire:")
     print(" 0 - Pour quitter :")
     choix = input("-->")
-    print(f"Votre choix est le {choix}")
+    if choix in [0, 1, 2]:
+        print(f"Votre choix est le {choix}")
+    else:
+        print("Choix invalide, veuillez recommencer")
