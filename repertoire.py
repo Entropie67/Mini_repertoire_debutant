@@ -7,7 +7,9 @@ print("\n Répertoir trop puissant |\n version réalisée par Red Richards, \n a
 print('#'*50)
 
 def ajouter_nom():
-    pass
+    nom  = input("Nom : ")
+    numero = input(f"Numéro de {nom}")
+
 
 def afficher_repertoir():
     pass
@@ -30,5 +32,8 @@ while choix != 0:
     choix = input("-->")
     if choix in [0, 1, 2]:
         print(f"Votre choix est le {choix}")
+        if choix == 1:
+            print("Vous débutez la procédure d'ajout d'un nouveau nom")
+            ajouter_nom()
     else:
         print("Choix invalide, veuillez recommencer")
