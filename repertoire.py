@@ -29,6 +29,7 @@ def detruire_urgence():
 def rechercher_nom(nom: str) -> bool:
 
     print("Le numéro de {} est {}")
+    return True
 
 with open('data.json', 'r') as fp:
     data = json.load(fp)
@@ -56,5 +57,6 @@ while choix != 0:
             afficher_repertoire(data)
         elif choix == 3:
             print("entrez le nom dont vous voulez le numéro")
+            rechercher_nom(input())
     else:
         print("Choix invalide, veuillez recommencer")
