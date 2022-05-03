@@ -26,10 +26,14 @@ def afficher_repertoire(data):
 def detruire_urgence():
     pass
 
-def rechercher_nom(nom: str) -> bool:
-
-    print("Le numéro de {} est {}")
-    return True
+def rechercher_nom(nom: str) -> str:
+    """
+        Fonction qui vérifie si un membre est dans le repertoire
+        retourne son numéro s'il s'y trouve, None sinon
+    :param nom: str
+    :return: bool
+    """
+    return data.get(nom, None)
 
 with open('data.json', 'r') as fp:
     data = json.load(fp)
@@ -57,6 +61,8 @@ while choix != 0:
             afficher_repertoire(data)
         elif choix == 3:
             print("entrez le nom dont vous voulez le numéro")
+
+            print("Le numéro de {} est {}")
             rechercher_nom(input())
     else:
         print("Choix invalide, veuillez recommencer")
