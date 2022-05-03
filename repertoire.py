@@ -31,7 +31,7 @@ def rechercher_nom(nom: str) -> str:
         Fonction qui vérifie si un membre est dans le repertoire
         retourne son numéro s'il s'y trouve, None sinon
     :param nom: str
-    :return: bool
+    :return: str
     """
     return data.get(nom, None)
 
@@ -50,6 +50,7 @@ while choix != 0:
     print(" \nVeuillez choisir une option\n")
     print(" 1 - Ajouter un nom")
     print(" 2 - Consulter le répertoire")
+    print(" 3 - Rechercher quelqu'un dans le répertoire")
     print(" 0 - Pour quitter")
     choix = int(input("-->"))
     if choix in [0, 1, 2, 3]:
