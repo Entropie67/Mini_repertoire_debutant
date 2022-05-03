@@ -9,8 +9,8 @@ def ajouter_nom(data: dict) -> None:
     """
         Procédure permettant d'ajouter un nom au dictionnaire data et
         de l'enregistrer au format Json
-    :param data: dic
-    :return: None
+        :param data: dic
+        :return: None
     """
     nom = input("Nom : ")
     numero = input(f"Numéro de {nom} :")
@@ -26,8 +26,9 @@ def afficher_repertoire(data):
 def detruire_urgence():
     pass
 
-def rechercher_nom():
-    pass
+def rechercher_nom(nom: str) -> bool:
+
+    print("Le numéro de {} est {}")
 
 with open('data.json', 'r') as fp:
     data = json.load(fp)
@@ -53,5 +54,7 @@ while choix != 0:
             ajouter_nom(data)
         elif choix == 2:
             afficher_repertoire(data)
+        elif choix == 3:
+            print("entrez le nom dont vous voulez le numéro")
     else:
         print("Choix invalide, veuillez recommencer")
