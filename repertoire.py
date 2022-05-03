@@ -60,7 +60,7 @@ while choix != 0:
         elif choix == 2:
             afficher_repertoire(data)
         elif choix == 3:
-            name = rechercher_nom(input("entrez le nom dont vous voulez le numéro"))
+            num = rechercher_nom(input("entrez le nom dont vous voulez le numéro"))
             if num:
                 print(f"Le numéro de est {num}")
             else:
