@@ -52,7 +52,7 @@ while choix != 0:
     print(" 2 - Consulter le répertoire")
     print(" 0 - Pour quitter")
     choix = int(input("-->"))
-    if choix in [0, 1, 2]:
+    if choix in [0, 1, 2, 3]:
         print(f"Votre choix est le {choix}")
         if choix == 1:
             print("Vous débutez la procédure d'ajout d'un nouveau nom")
@@ -60,9 +60,10 @@ while choix != 0:
         elif choix == 2:
             afficher_repertoire(data)
         elif choix == 3:
-            print("entrez le nom dont vous voulez le numéro")
-
-            print("Le numéro de {} est {}")
-            rechercher_nom(input())
+            name = rechercher_nom(input("entrez le nom dont vous voulez le numéro"))
+            if num:
+                print(f"Le numéro de est {num}")
+            else:
+                print(f"Le numéro n'est pas présent dans notre repertoire ")
     else:
         print("Choix invalide, veuillez recommencer")
